@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="A modern React application" />
+    <title>My React App</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(270deg, #0f172a, #1e293b, #0f172a);
+        background-size: 600% 600%;
+        animation: gradientShift 15s ease infinite;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Glassmorphism Card */
+      #loader {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        padding: 40px 60px;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      /* 3D Loader */
+      .spinner {
+        border: 8px solid rgba(255, 255, 255, 0.1);
+        border-top: 8px solid #38bdf8;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        animation: spin 1.2s linear infinite;
+        margin: 0 auto 20px;
+        box-shadow: 0 0 20px #38bdf8;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #38bdf8, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #38bdf8;
+        }
+        to {
+          text-shadow: 0 0 20px #a855f7;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        opacity: 0.85;
+        margin-bottom: 20px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Stylish Big Textbox */
+      .big-textbox {
+        width: 400px; /* wider */
+        height: 50px; /* taller */
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+        transition: all 0.3s ease;
+      }
+
+      .big-textbox:focus {
+        box-shadow: 0 0 20px #38bdf8;
+        background: rgba(255, 255, 255, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Loader (until React mounts) -->
+    <div id="root">
+      <div id="loader">
+        <div class="spinner"></div>
+        <h1>⚡ React App Loading...</h1>
+        <p>Bringing your experience to life 🚀</p>
+
+        <!-- Attractive Large Textbox -->
+        <input
+          type="text"
+          class="big-textbox"
+          placeholder="Enter your text here..."
+        />
+      </div>
+    </div>
+  </body>
+</html>
