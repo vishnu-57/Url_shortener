@@ -1,7 +1,5 @@
-Got it 👍 You want the entire **README.md code** in **one continuous block** (without me splitting sections). Here’s the full code in a single response:
 
-````markdown
-# Modern React Textbox UI
+# Url Shortener
 
 A modern and attractive React-based UI featuring a stylish textbox and button, built with **React**, **TailwindCSS**, and **Framer Motion**.
 
